@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
             var serachString = document.getElementsByClassName("search-bar")[0].value
             var urlEncodedSearchString = encodeURIComponent(serachString);
-            axios.get("http://www.omdbapi.com/?apikey=3430a78&s=" + urlEncodedSearchString)
+            axios.get("https://www.omdbapi.com/?apikey=3430a78&s=" + urlEncodedSearchString)
             .then(function(response) {
                 console.log(response.data);
                 var movieHTML = renderMovies(response.data.Search);
